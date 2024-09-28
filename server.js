@@ -1,10 +1,10 @@
 // express web server
 const express = require('express');
 const app = express();
+const router = require('./routes')
 
-app.get('/', (req, res) => {
-    res.send('Hello my friends there, my yu');
-})
+
+app.use('/', router);
 
 port = process.env.PORT || 3000;
 
